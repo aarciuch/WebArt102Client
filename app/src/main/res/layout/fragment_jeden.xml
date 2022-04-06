@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="getPageVMLayout"
+            type="art.pum.webart102client.GetPageSourceVM" />
     </data>
 
     <ScrollView
@@ -33,14 +35,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="@string/za_aduj_stron"/>
+                android:text="@string/za_aduj_stron"
+                android:onClick="@{ ()-> getPageVMLayout.getStrone()}"/>
 
             <TextView
                 android:id="@+id/strona"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:text="@{getPageVMLayout.page.toString()}"/>
 
 
 
